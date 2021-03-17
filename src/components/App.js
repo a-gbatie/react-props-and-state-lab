@@ -14,6 +14,13 @@ class App extends React.Component {
       }
     }
   }
+onChangeType = () => {return state.filters.type}
+onFindPetsClick = () => {
+  fetch('src/data/pets.js')
+  .then(res => res.json())
+  .then(data => this.setState([filters.type]));
+}
+
 
   render() {
     return (
